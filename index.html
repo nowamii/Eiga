@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Eiga — A movie showcase website featuring film reviews, a gallery, and more. Eiga (映画) is the Japanese word for film.">
+  <title>Eiga えいが — Movie Showcase</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="top">
+  <div class="container">
+    <div class="header-inner">
+      <div>
+        <h1>[<span class="site-logo">&#10687;</span>] EIGA えいが</h1>
+        <p class="site-tagline">your curated window into cinema</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- NAVIGATION -->
+<nav>
+  <ul>
+    <li><a href="#about">
+      <span class="nav-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 10 24 1"><path d="M18 11c0-.96-.68-1.76-1.58-1.95.36-.6.58-1.3.58-2.05 0-2.21-1.79-4-4-4-1.52 0-2.82.86-3.5 2.1C8.82 3.85 7.52 3 6 3 3.79 3 2 4.79 2 7c0 .9.31 1.73.82 2.4-.49.36-.82.95-.82 1.6v8c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-2.5l4 2v-7l-4 2zm-5-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2M6 5c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2M4 19v-8h12v8z"/></svg>
+      </span> About</a></li>
+    <li><a href="#genres">
+      <span class="nav-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 10 24 1"><path d="M20 4h-8.59L10 2.59C9.62 2.21 9.12 2 8.59 2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 2v3H4V6zM4 18v-7h16v7z"/></svg>
+      </span> Genres</a></li>
+    <li><a href="#quotes">
+      <span class="nav-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 10 24 1"><path d="M9 9a2 2 0 1 0 0 4 2 2 0 1 0 0-4m6 0a2 2 0 1 0 0 4 2 2 0 1 0 0-4"/><path d="M12 3C6.49 3 2 6.59 2 11c0 2.91 1.9 5.51 5 6.93V21c0 .38.21.72.55.89.14.07.29.11.45.11.21 0 .42-.07.6-.2l3.74-2.8c5.36-.14 9.66-3.67 9.66-8s-4.49-8-10-8m0 14c-.22 0-.43.07-.6.2L9 19v-1.73c0-.41-.25-.78-.64-.93C5.67 15.3 4 13.26 4 11c0-3.31 3.59-6 8-6s8 2.69 8 6-3.59 6-8 6"/></svg>
+      </span> Quotes</a></li>
+    <li><a href="#gallery">
+      <span class="nav-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 10 24 1"><path d="M20 3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M9.54 9 6.87 5h2.6l2.67 4zm5 0-2.67-4h2.6l2.67 4zM4 5h.46l2.67 4H4zm0 14v-8h16V9h-.46l-2.67-4H20v14z"/></svg>
+      </span> Gallery</a></li>
+    <li><a href="#reviews">
+      <span class="nav-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 10 24 1"><path d="M21.57 2.18a.98.98 0 0 0-.92-.11C7.29 7.2 4.15 20.71 4.02 21.28l1.95.43s.36-1.55 1.31-3.72H11c6.07 0 11-4.93 11-11V3c0-.33-.16-.64-.43-.82M20 7c0 4.96-4.04 9-9 9H8.24C10.26 12.16 13.87 7.31 20 4.5zM5 10h2V7h3V5H7V2H5v3H2v2h3z"/></svg>
+      </span> Reviews</a></li>
+  </ul>
+</nav>
+
+
+<!-- MAIN CONTENT -->
+<main>
+
+  <!-- ABOUT EIGA -->
+  <section class="section-wrap" id="about">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>
+          <span class="nav-icon section-h2-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M18 11c0-.96-.68-1.76-1.58-1.95.36-.6.58-1.3.58-2.05 0-2.21-1.79-4-4-4-1.52 0-2.82.86-3.5 2.1C8.82 3.85 7.52 3 6 3 3.79 3 2 4.79 2 7c0 .9.31 1.73.82 2.4-.49.36-.82.95-.82 1.6v8c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-2.5l4 2v-7l-4 2zm-5-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2M6 5c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2M4 19v-8h12v8z"/></svg>
+          </span> About Eiga
+        </h2>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- LEFT COLUMN -->
+        <div>
+          <p>
+            Welcome to <abbr title="Japanese term for film"><strong>Eiga (えいが)</strong></abbr>.
+            — a curated tribute to the craft of cinema: a space to explore
+            remarkable stories, visionary directors, and unforgettable performances.
+          </p>
+
+          <hr>
+
+          <h3>&#9654; Why Cinema Matters</h3>
+          <p>
+            Film is more than entertainment — it is a mirror
+            held up to the human experience. Great movies change how we see ourselves
+            and the world. <em>Eiga</em> celebrates that power.
+          </p>
+
+          <hr>
+
+          <!-- SHOW MORE / LESS BUTTON -->
+          <button class="btn btn-crimson" id="showMoreBtn" onclick="toggleMore()">
+            [ + SHOW MORE ]
+          </button>
+
+          <div class="toggle-content" id="moreContent">
+            <p style="margin-top:14px;">
+              Cinema spans continents and cultures. From the golden age of <strong>Hollywood</strong>
+              to the bold <em>new wave movements</em> of Europe and Asia, every era has produced
+              films that define the human experience. <em>Eiga</em> celebrates them all.
+            </p>
+            <aside>
+              <h3>&#9733; Did You Know?</h3>
+              <p>The first public film screening was held by the Lumière brothers in Paris on
+              December 28, 1895 — <strong>making cinema over 130 years old!</strong></p>
+            </aside>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="info-card">
+
+          <h3>&#9654; Top Movies This Week</h3>
+          <ol id="weeklyTopMovies">
+            <li><em>Loading...</em></li>
+          </ol>
+
+          <hr>
+
+          <h3>&#9733; Must-See Classics</h3>
+          <ul class="classics-list">
+            <li class="hoverable-item">
+              <span class="hoverable-trigger">
+                <span>The Godfather <em>(1972)</em></span>
+                <span class="classic-rating" title="4.5/5">★★★★⯪</span>
+              </span>
+              <div class="hover-popup">
+                <p class="hover-popup-synopsis">The aging patriarch of an organized crime dynasty transfers control to his reluctant son — a sweeping epic of family, power, and betrayal.</p>
+                <a class="hover-popup-btn" href="https://www.youtube.com/watch?v=UaVTIH8mujA" target="_blank" rel="noopener">&#9654; Watch Trailer</a>
+              </div>
+            </li>
+            <li class="hoverable-item">
+              <span class="hoverable-trigger">
+                <span>Schindler's List <em>(1993)</em></span>
+                <span class="classic-rating" title="4.5/5">★★★★⯪</span>
+              </span>
+              <div class="hover-popup">
+                <p class="hover-popup-synopsis">In German-occupied Poland, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing the liquidation of a ghetto.</p>
+                <a class="hover-popup-btn" href="https://www.youtube.com/watch?v=gG22XNhtnoY" target="_blank" rel="noopener">&#9654; Watch Trailer</a>
+              </div>
+            </li>
+            <li class="hoverable-item">
+              <span class="hoverable-trigger">
+                <span>2001: A Space Odyssey <em>(1968)</em></span>
+                <span class="classic-rating" title="4.2/5">★★★★☆</span>
+              </span>
+              <div class="hover-popup">
+                <p class="hover-popup-synopsis">Humanity finds a mysterious, obviously artificial object buried beneath the Lunar surface — a journey beyond the infinite begins.</p>
+                <a class="hover-popup-btn" href="https://www.youtube.com/watch?v=oR_e9y-bka0" target="_blank" rel="noopener">&#9654; Watch Trailer</a>
+              </div>
+            </li>
+            <li class="hoverable-item">
+              <span class="hoverable-trigger">
+                <span>Spirited Away <em>(2001)</em></span>
+                <span class="classic-rating" title="4.3/5">★★★★☆</span>
+              </span>
+              <div class="hover-popup">
+                <p class="hover-popup-synopsis">During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits — and begins a spirited journey home.</p>
+                <a class="hover-popup-btn" href="https://www.youtube.com/watch?v=ByXuk9QqQkk" target="_blank" rel="noopener">&#9654; Watch Trailer</a>
+              </div>
+            </li>
+          </ul>
+
+          <hr>
+
+          <h3><button class="btn-glossary-plus" id="glossaryToggleBtn" onclick="toggleGlossary()" title="Show more terms"> &#9660; </button> Film Glossary</h3>
+          <dl id="glossaryVisible">
+            <dt>Auteur</dt>
+            <dd>A director with a personal style so strong they are the film's primary author.</dd>
+            <dt>B-Roll</dt>
+            <dd>Supplementary footage intercut with the main shot to provide context or visual variety.</dd>
+            <dt></dt>
+          </dl>
+          <div class="glossary-hidden" id="glossaryHidden" style="display:none;">
+            <dl>
+              <dt>Chiaroscuro</dt>
+              <dd>The dramatic use of light and shadow, borrowed from painting, to create depth and mood.</dd>
+              <dt>Diegetic Sound</dt>
+              <dd>Sound that exists within the world of the film — dialogue, footsteps, a radio playing on screen.</dd>
+              <dt>Dutch Angle</dt>
+              <dd>A tilted camera shot used to suggest unease, disorientation, or psychological tension.</dd>
+              <dt>Jump Cut</dt>
+              <dd>An abrupt edit between two similar shots that creates a disjointed sense of time passing.</dd>
+              <dt>Leitmotif</dt>
+              <dd>A recurring musical theme associated with a character, place, or idea throughout the film.</dd>
+              <dt>MacGuffin</dt>
+              <dd>A plot device that motivates characters but is largely irrelevant to the story.</dd>
+              <dt>Match Cut</dt>
+              <dd>A transition where a shape or movement in one shot is continued by a similar shape in the next.</dd>
+              <dt>Mise-en-scène</dt>
+              <dd>Everything visible in a frame — set design, lighting, and actor placement.</dd>
+              <dt>Montage</dt>
+              <dd>An editing technique that juxtaposes a series of shots to condense time or create an idea.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPLORE GENRES -->
+  <section class="section-wrap" id="genres">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>
+          <span class="nav-icon section-h2-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4h-8.59L10 2.59C9.62 2.21 9.12 2 8.59 2H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 2v3H4V6zM4 18v-7h16v7z"/></svg>
+          </span> Explore Genres
+        </h2>
+      </div>
+
+      <article class="info-card">
+        <h3>&#9654; Science Fiction</h3>
+        <p>
+          <strong>Sci-Fi</strong> pushes the boundaries of imagination. From dystopian futures to
+          interstellar exploration, these films ask the deepest questions about humanity and technology.
+          Masterpieces of the genre include <em>Blade Runner</em>, <em>Interstellar</em>, and <em>Arrival</em>.
+        </p>
+      </article>
+
+      <hr>
+
+      <article class="info-card" style="margin-top:18px;">
+        <h3>&#9654; Drama</h3>
+        <p>
+          <strong>Drama</strong> is the backbone of cinema. Character-driven narratives exploring
+          love, loss, ambition, and redemption have produced some of the most emotionally powerful
+          experiences in film history.
+        </p>
+      </article>
+
+      <hr>
+
+      <article class="info-card" style="margin-top:18px;">
+        <h3>&#9654; Thriller &amp; Suspense</h3>
+        <p>
+          Tension, dread, and the unknown. <strong>Thriller films</strong> keep audiences on the edge
+          of their seats — from psychological mind-games to high-stakes action. <em>Hitchcock</em>
+          defined the genre; countless directors have built upon it since.
+        </p>
+      </article>
+
+      <!-- HIDDEN GENRES (shown after Show More) -->
+      <div class="toggle-content" id="moreGenres">
+
+        <hr>
+        <article class="info-card" style="margin-top:18px;">
+          <h3>&#9654; Animation</h3>
+          <p>
+            <strong>Animation</strong> transcends the limits of live-action to build entirely new worlds. 
+            From the Studio Ghibli universe of wonder to Pixar's emotionally resonant stories, animated 
+            films are far more than children's entertainment — they are profound works of art.
+          </p>
+        </article>
+
+        <hr>
+        <article class="info-card" style="margin-top:18px;">
+          <h3>&#9654; Romance</h3>
+          <p>
+            <strong>Romance films</strong> explore the electric, tender, and often painful landscape of love.
+            From sweeping epics to intimate conversations over a single night, the best romantic films — like 
+            <em>Before Sunrise</em> or <em>Eternal Sunshine of the Spotless Mind</em> — feel intensely personal.
+          </p>
+        </article>
+
+        <hr>
+        <article class="info-card" style="margin-top:18px;">
+          <h3>&#9654; Horror</h3>
+          <p>
+            <strong>Horror</strong> confronts our deepest primal fears. Whether it uses supernatural dread, slasher
+            tension, or slow psychological unraveling, the genre has produced some of the most technically creative 
+            films ever made — from <em>The Shining</em> to <em>Hereditary</em>.
+          </p>
+        </article>
+
+        <hr>
+        <article class="info-card" style="margin-top:18px;">
+          <h3>&#9654; Documentary</h3>
+          <p>
+            <strong>Documentary cinema</strong> transforms reality into narrative. Filmmakers like
+            Werner Herzog and Errol Morris have elevated the form into high art — revealing the strange, 
+            beautiful, and troubling truths lurking beneath the surface of everyday life.
+          </p>
+        </article>
+
+        <hr>
+        <article class="info-card" style="margin-top:18px;">
+          <h3>&#9654; Comedy</h3>
+          <p>
+            <strong>Comedy</strong> is deceptively difficult. The best comedies — from screwball classics to 
+            dry deadpan — demand extraordinary timing, sharp writing, and fearless performance. Films like 
+            <em>Booksmart</em> and <em>Bottoms</em> prove the genre is richer than ever.
+          </p>
+        </article>
+
+        <hr>
+        <article class="info-card" style="margin-top:18px;">
+          <h3>&#9654; Historical &amp; Period Films</h3>
+          <p>
+            <strong>Period films</strong> transport us across time with meticulous costume, architecture, and
+            atmosphere. Whether revisiting wartime Europe or Victorian England, the best historical dramas 
+            find timeless human truths within their specific eras.
+          </p>
+        </article>
+
+        <hr>
+        <article class="info-card" style="margin-top:18px;">
+          <h3>&#9654; Music &amp; Musical</h3>
+          <p>
+            <strong>Music films</strong> tap into emotion on a frequency that dialogue alone cannot reach. From
+            jukebox musicals like <em>Bohemian Rhapsody</em> to original sung-through narratives like 
+            <em>La La Land</em>, these films use song and sound as the primary language of the soul.
+          </p>
+        </article>
+      </div>
+
+      <div style="margin-top: 24px; text-align: center;">
+        <button class="btn btn-crimson" id="showMoreGenresBtn" onclick="toggleGenres()">
+          [ + SHOW MORE GENRES ]
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- QUOTE OF THE DAY -->
+  <section class="section-wrap" id="quotes">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>
+          <span class="nav-icon section-h2-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 9a2 2 0 1 0 0 4 2 2 0 1 0 0-4m6 0a2 2 0 1 0 0 4 2 2 0 1 0 0-4"/><path d="M12 3C6.49 3 2 6.59 2 11c0 2.91 1.9 5.51 5 6.93V21c0 .38.21.72.55.89.14.07.29.11.45.11.21 0 .42-.07.6-.2l3.74-2.8c5.36-.14 9.66-3.67 9.66-8s-4.49-8-10-8m0 14c-.22 0-.43.07-.6.2L9 19v-1.73c0-.41-.25-.78-.64-.93C5.67 15.3 4 13.26 4 11c0-3.31 3.59-6 8-6s8 2.69 8 6-3.59 6-8 6"/></svg>
+          </span> Quote of the Day
+        </h2>
+      </div>
+
+      <p class="quote-date-label" id="quoteDateLabel"></p>
+
+      <div id="quoteOfDay">
+        <!-- Injected by script.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MOVIE GALLERY -->
+  <section class="section-wrap" id="gallery">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>
+          <span class="nav-icon section-h2-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20 3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M9.54 9 6.87 5h2.6l2.67 4zm5 0-2.67-4h2.6l2.67 4zM4 5h.46l2.67 4H4zm0 14v-8h16V9h-.46l-2.67-4H20v14z"/></svg>
+          </span> Movie Gallery
+        </h2>
+      </div>
+
+      <p style="margin-bottom:22px; color:var(--ink-muted); font-size:.8rem; font-style:italic;">
+        &gt;&gt; Click any card to view synopsis, rating, trailer, and details.
+      </p>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Cards injected by script.js -->
+      </div>
+
+      <div style="margin-top:28px; text-align:center;" id="showMoreGalleryWrap">
+        <button class="btn btn-crimson" id="showMoreGalleryBtn" onclick="showMoreGallery()">
+          [ + SHOW MORE MOVIES ]
+        </button>
+      </div>
+
+      <div style="margin-top:12px; text-align:center; display:none;" id="showLessGalleryWrap">
+        <button class="btn btn-outline" id="showLessGalleryBtn" onclick="showLessGallery()">
+          [ − SHOW LESS ]
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MOVIE REVIEWS -->
+  <section class="section-wrap" id="reviews">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>
+          <span class="nav-icon section-h2-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M21.57 2.18a.98.98 0 0 0-.92-.11C7.29 7.2 4.15 20.71 4.02 21.28l1.95.43s.36-1.55 1.31-3.72H11c6.07 0 11-4.93 11-11V3c0-.33-.16-.64-.43-.82M20 7c0 4.96-4.04 9-9 9H8.24C10.26 12.16 13.87 7.31 20 4.5zM5 10h2V7h3V5H7V2H5v3H2v2h3z"/></svg>
+          </span> Movie Reviews
+        </h2>
+      </div>
+
+      <div class="review-container">
+
+        <!-- REVIEW FORM -->
+        <div class="form-wrap">
+          <h3>&#9654; Submit Your Review</h3>
+
+          <div class="form-group">
+            <label for="reviewName">Your Name</label>
+            <input type="text" id="reviewName" placeholder="e.g. Wana Mei">
+          </div>
+
+          <div class="form-group">
+            <label for="reviewMovie">Movie Title</label>
+            <input type="text" id="reviewMovie" placeholder="e.g. Sweeney Todd">
+          </div>
+
+          <div class="form-group">
+            <label>Your Rating</label>
+            <div class="star-select" id="starSelect"></div>
+            <div class="star-value-label" id="starValueLabel"></div>
+            <input type="hidden" id="reviewRating" value="0">
+          </div>
+
+          <div class="form-group">
+            <label for="reviewComment">Your Review</label>
+            <textarea id="reviewComment" placeholder="Share your thoughts..."></textarea>
+          </div>
+
+          <button class="btn btn-crimson" onclick="submitReview()">
+            [ &#9658; SUBMIT ]
+          </button>
+          <p class="form-error" id="formError">Please fill in all fields and select a rating.</p>
+        </div>
+
+        <!-- REVIEWS DISPLAY -->
+        <div>
+          <p class="reviews-heading">&#9632; COMMUNITY REVIEWS</p>
+          <div class="reviews-display" id="reviewsDisplay">
+            <p class="no-reviews" id="noReviews">No reviews yet. Be the first!</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <span class="footer-logo">&#9632; EIGA えいが &#9632;</span>
+    <p><strong>Eiga</strong> — A Movie Showcase Website</p>
+    <p>Curated for <em>CPPC 18/18L Computer Networks and Security</em></p>
+    <p>Marinduque State University &middot; College of Engineering</p>
+    <p><em>Department of Computer Engineering</em></p>
+    <p style="margin-top:10px; font-size:.7rem; color:var(--crimson-pale);">
+      &copy; 2026 Eiga. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+
+<!-- BACK TO TOP -->
+<button id="backToTop" title="Back to top"
+  onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  &#9650;<br>TOP
+</button>
+
+
+<!-- MOVIE DETAIL MODAL -->
+<div class="modal-overlay" id="movieModal" onclick="closeModalOnOverlay(event)">
+  <div class="modal">
+    <button class="modal-close" id="modalCloseBtn" onclick="closeModal()">[ X ]</button>
+    <div class="modal-layout">
+      <div class="modal-poster-wrap" id="modalPosterWrap">
+        <!-- Injected by JS -->
+      </div>
+      <div style="flex:1; min-width:0;">
+        <h2 id="modalTitle"></h2>
+        <div class="modal-meta" id="modalMeta"></div>
+        <p class="modal-synopsis" id="modalSynopsis"></p>
+        <div class="modal-cast" id="modalCast"></div>
+      </div>
+    </div>
+    <div class="modal-media" id="modalMedia"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
