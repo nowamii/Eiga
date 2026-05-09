@@ -26,7 +26,7 @@ const MOVIES = [
     synopsis: "WE ARE INFINITE. Pittsburgh, Pennsylvania, 1991. High school freshman Charlie is a wallflower, always watching life from the sidelines, until two senior students, Sam and her stepbrother Patrick, become his mentors, helping him discover the joys of friendship, music and love.",
     cast: ["Logan Lerman", "Emma Watson", "Ezra Miller"],
     director: "Stephen Chbosky",
-    trailer: "n5rh7O4IDc0",
+    trailer: "10R4HJFj0JE",
     soundtrack: "ost/perks.mp3",
     soundtrackTitle: "Heroes",
     soundtrackArtist: "David Bowie"
@@ -90,7 +90,7 @@ const MOVIES = [
     synopsis: "IN A WORLD OF FLEETING MOMENTS, FIND THE BEAUTY THAT LASTS. Hirayama is content with his life as a toilet cleaner in Tokyo. Outside of his structured routine, he cherishes music on cassette tapes, books, and taking photos of trees. Through unexpected encounters, he reflects on finding beauty in the world.",
     cast: ["Kōji Yakusho", "Tokio Emoto", "Arisa Nakano"],
     director: "Wim Wenders",
-    trailer: "QzZBbX5A1FA"
+    trailer: "Iv8YO5BXCAQ"
   },
   {
     id: 7,
@@ -411,17 +411,17 @@ const WEEKLY_TOP = [
   {
     title: "The Devil Wears Prada 2", year: "2026",
     synopsis: "Miranda Priestly returns. Andy Sachs faces the fashion world once more in this long-awaited sequel to the iconic 2006 film.",
-    trailer: "https://www.youtube.com/watch?v=e9HXmMnUEdE"
+    trailer: "e9HXmMnUEdE"
   },
   {
     title: "Michael", year: "2026",
     synopsis: "A biographical film exploring the life, music, and legacy of Michael Jackson — the King of Pop.",
-    trailer: "https://www.youtube.com/watch?v=3zOLzsbOleM"
+    trailer: "3zOLzsbOleM"
   },
   {
     title: "The Devil Wears Prada", year: "2006",
     synopsis: "A smart but sensible new graduate lands a job as an assistant to Miranda Priestly, the most demanding fashion magazine editor in New York.",
-    trailer: "https://www.youtube.com/watch?v=6ZOZwUQKu3E"
+    trailer: "6ZOZwUQKu3E"
   },
 ];
 
@@ -499,7 +499,7 @@ function buildWeeklyTop() {
       <div class="hover-popup">
         <p class="hover-popup-synopsis">${escapeHTML(m.synopsis || 'No synopsis available.')}</p>
         ${m.trailer
-          ? `<a class="hover-popup-btn" href="${escapeHTML(m.trailer)}" target="_blank" rel="noopener">&#9654; Watch Trailer</a>`
+          ? `<button class="hover-popup-btn" onclick="openTrailerModal('${escapeHTML(m.trailer)}', '${escapeHTML(m.title)}')">&#9654; Watch Trailer</button>`
           : `<span class="hover-popup-btn hover-popup-btn--disabled">&#9654; No Trailer Yet</span>`}
       </div>
     </li>
@@ -645,7 +645,7 @@ function openModal(id) {
           <button
             class="trailer-play-btn"
             aria-label="Play trailer"
-            onclick="window.open('https://www.youtube.com/watch?v=${tid}','_blank','noopener')"
+            onclick="loadTrailer('${tid}')"
           >&#9654;</button>
         </div>
       </div>
@@ -710,12 +710,45 @@ function loadTrailer(videoId) {
   if (!wrap) return;
   wrap.innerHTML = `
     <iframe
-      src="https://www.youtube.com/embed/${videoId}?autoplay=1"
+      src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1"
       title="Official Trailer"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
       allowfullscreen>
     </iframe>
   `;
+}
+
+function openTrailerModal(videoId, title) {
+  const overlay = document.getElementById('movieModal');
+  const posterWrap = document.getElementById('modalPosterWrap');
+  const mediaEl = document.getElementById('modalMedia');
+
+  // Clear poster and other fields
+  posterWrap.innerHTML = '';
+  document.getElementById('modalTitle').textContent = '';
+  document.getElementById('modalMeta').innerHTML = '';
+  document.getElementById('modalSynopsis').textContent = '';
+  document.getElementById('modalCast').innerHTML = '';
+
+  // Inject trailer directly (no thumbnail step needed)
+  mediaEl.innerHTML = `
+    <div class="modal-media-section">
+      <h3>&#9654; Official Trailer</h3>
+      <div class="modal-trailer-wrap">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/${escapeHTML(videoId)}?autoplay=1&rel=0&modestbranding=1"
+          title="${escapeHTML(title)} Official Trailer"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  `;
+
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
 }
 
 function closeModalOnOverlay(e) {
